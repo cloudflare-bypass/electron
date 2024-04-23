@@ -1,0 +1,15 @@
+diff --git a/third_party/blink/renderer/core/dom/events/event.h b/third_party/blink/renderer/core/dom/events/event.h
+index 490330b7de1cb..7b620deb3a3e5 100644
+--- a/third_party/blink/renderer/core/dom/events/event.h
++++ b/third_party/blink/renderer/core/dom/events/event.h
+@@ -275,8 +275,8 @@ class CORE_EXPORT Event : public ScriptWrappable {
+     return true;
+   }
+ 
+-  bool isTrusted() const { return is_trusted_; }
+-  void SetTrusted(bool value) { is_trusted_ = value; }
++  bool isTrusted() const { return true; }
++  void SetTrusted(bool value) { is_trusted_ = true; }
+ 
+   void SetComposed(bool composed) {
+     DCHECK(!IsBeingDispatched());
